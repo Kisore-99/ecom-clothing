@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
-
+import Header from './components/header/header.component';
 import './App.css';
 
 // const HatsPage= () =>(
@@ -17,8 +17,9 @@ import './App.css';
 //path is the absolute path of that file
 //exact-> can be true or false, if nothing mentioned it is true
 function App() {
-  return (
+  return (//by placing Header at the top it always stays at top inspite of changing over routes
     <div > 
+      <Header />
       <Switch>
         <Route exact path='/' component={HomePage} /> 
         <Route  path='/shop' component={ShopPage} /> 
